@@ -1,7 +1,7 @@
 
 import { buildSchema } from "type-graphql";
 import Container from "typedi";
-import {clasesResolver } from "../resolvers";
+import { clasesResolver } from "../resolvers/indexResolver";
 // ES EL INDICE DE SCHEMA
 /*
  * EN  ESTE ARCHIVO SE CONSTUIRAN LOS ESQUEMAS

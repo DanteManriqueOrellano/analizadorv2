@@ -5,8 +5,9 @@ import koabody from "koa-body";
 import Router from "koa-router";
 import cors from 'koa2-cors'
 import { ApolloServer } from "apollo-server-koa";
-import { schemas } from "../src/graphql/schemas"
+
 import { connectFireBase } from '../src/conecTodb/connectDB';
+import { schemas } from './graphql/schemas/indexSchemas';
 
 const port = 3000
 const main = async () => {
