@@ -1,0 +1,15 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\src",
+    "\\src\\conecTodb",
+    "\\src\\graphql",
+    "\\src\\graphql\\resolvers",
+    "\\src\\graphql\\resolvers\\moduloUsuario",
+    "\\src\\graphql\\resolvers\\moduloUsuario\\entity",
+    "\\src\\graphql\\resolvers\\moduloUsuario\\resolver",
+    "\\src\\graphql\\schemas"
+  ],
+  "SelectedNode": "\\src\\graphql\\resolvers\\moduloUsuario\\resolver\\resolverUsuario.ts",
+  "PreviewInSolutionExplorer": false
+}

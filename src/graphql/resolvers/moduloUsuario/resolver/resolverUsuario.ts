@@ -2,7 +2,8 @@ import { Args, Mutation, Resolver } from "type-graphql";
 
 import { getRepository } from "fireorm";
 import { Service } from "typedi";
-import { Usuario } from "../entity/entityUsuario";
+import { UnUsuario } from "../entity/entityUsuario";
+
 
 //import { isAuth } from "../../middleware/isAuth";
 
@@ -12,16 +13,23 @@ import { Usuario } from "../entity/entityUsuario";
 export class RegisterUserResolver {
 
     //@UseMiddleware(isAuth)
-    @Mutation(() => Usuario)
+    @Mutation(() => UnUsuario)
     async register(
 
-        @Args() user: Usuario,
+        @Args(() => UnUsuario) user: UnUsuario
 
-    ): Promise<Usuario> {
+    ): Promise<UnUsuario> {
 
 
-        const userRepository = getRepository(Usuario);
-        const newUser = await userRepository.create(user);
+        const userRepository = getRepository(UnUsuario);
+        const newUser = await userRepository.create(
+            {
+                email: user.email,
+                firstName: user.firstName,
+                id: user.id
+
+            }
+        );
         return newUser
     }
 }

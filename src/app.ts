@@ -1,12 +1,12 @@
 import 'reflect-metadata'; // We need this in order to use @Decorators
 import Koa from "koa";
-import config from './config';
+
 import koabody from "koa-body";
 import Router from "koa-router";
 import cors from 'koa2-cors'
 import { ApolloServer } from "apollo-server-koa";
-import { schemas } from "./api/graphql/schema"
-import { connectFireBase } from './loaders/firebase';
+import { schemas } from "../src/graphql/schemas"
+import { connectFireBase } from '../src/conecTodb/connectDB';
 
 const port = 3000
 const main = async () => {
