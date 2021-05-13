@@ -1,0 +1,47 @@
+{
+  "name": "analiza",
+  "version": "1.1.1",
+  "description": "",
+  "main": "src/app.ts",
+  "scripts": {
+    "build": "tsc",
+    "heroku-postbuild": "npm run build",
+    "dev": "nodemon src/app.ts --exec ts-node",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/cors": "^2.8.8",
+    "@types/express-session": "^1.17.0",
+    "@types/node": "^15.0.3",
+    "nodemon": "^2.0.7",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.2.4"
+  },
+  "dependencies": {
+    "@google-cloud/connect-firestore": "^2.0.1",
+    "@koa/cors": "^3.1.0",
+    "@types/dotenv": "^8.2.0",
+    "@types/koa": "^2.13.1",
+    "@types/koa-router": "^7.4.2",
+    "@types/koa2-cors": "^2.0.1",
+    "@types/koa__cors": "^3.0.2",
+    "apollo-server-koa": "^2.24.0",
+    "class-validator": "^0.13.1",
+    "cors": "^2.8.5",
+    "dotenv": "^9.0.2",
+    "express-session": "^1.17.1",
+    "firebase-admin": "^9.5.0",
+    "fireorm": "^0.20.0",
+    "graphql": "^15.5.0",
+    "koa": "^2.13.1",
+    "koa-body": "^4.2.0",
+    "koa-router": "^10.0.0",
+    "koa2-cors": "^2.0.6",
+    "proposal-temporal": "^0.7.0",
+    "reflect-metadata": "^0.1.13",
+    "type-graphql": "^1.1.1",
+    "typedi": "^0.10.0"
+  }
+}
