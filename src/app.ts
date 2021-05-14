@@ -3,7 +3,9 @@ import Koa from "koa";
 
 import koabody from "koa-body";
 import Router from "koa-router";
-import cors from 'koa2-cors'
+import cors from 'koa2-cors';
+import bodyparser from "koa-bodyparser"
+import json from "koa-json";
 import { ApolloServer } from "apollo-server-koa";
 
 
@@ -32,8 +34,10 @@ const main = async () => {
             }
         }
     });
-    router.use(koaBody())
-    app.use(koabody());
+    
+    
+    app.use(json());
+    app.use(bodyparser());
     app.use(router.routes());
     app.use(cors({ credentials: true, origin: "http://localhost:3000" }));
 
