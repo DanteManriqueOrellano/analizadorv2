@@ -8,7 +8,8 @@ import { ApolloServer } from "apollo-server-koa";
 
 
 import { schemas } from './graphql/schemas/indexSchemas';
-import { ConnecttoFirebase } from './conecTodb/connectDB';
+import { ConnecttoFirebase } from './DB';
+
 
 ConnecttoFirebase()
 const port = 3000
