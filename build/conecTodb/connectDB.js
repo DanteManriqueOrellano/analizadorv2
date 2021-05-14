@@ -19,10 +19,10 @@ var __importStar = (this && this.__importStar) || function (mod) {
     return result;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.connectFireBase = void 0;
+exports.ConnecttoFirebase = void 0;
 const admin = __importStar(require("firebase-admin"));
 const fireorm = __importStar(require("fireorm"));
-function connectFireBase() {
+async function ConnecttoFirebase() {
     admin.initializeApp({
         credential: admin.credential.cert({
             clientEmail: "firebase-adminsdk-japw8@corporacionaquaperu.iam.gserviceaccount.com",
@@ -34,5 +34,5 @@ function connectFireBase() {
     const firestore = admin.firestore();
     fireorm.initialize(firestore);
 }
-exports.connectFireBase = connectFireBase;
+exports.ConnecttoFirebase = ConnecttoFirebase;
 //# sourceMappingURL=connectDB.js.map

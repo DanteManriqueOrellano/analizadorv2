@@ -9,11 +9,11 @@ const koa_body_1 = __importDefault(require("koa-body"));
 const koa_router_1 = __importDefault(require("koa-router"));
 const koa2_cors_1 = __importDefault(require("koa2-cors"));
 const apollo_server_koa_1 = require("apollo-server-koa");
-const connectDB_1 = require("../src/conecTodb/connectDB");
 const indexSchemas_1 = require("./graphql/schemas/indexSchemas");
+const connectDB_1 = require("./conecTodb/connectDB");
+connectDB_1.ConnecttoFirebase();
 const port = 3000;
 const main = async () => {
-    connectDB_1.connectFireBase();
     const app = new koa_1.default();
     const router = new koa_router_1.default();
     const apolloServer = new apollo_server_koa_1.ApolloServer({
