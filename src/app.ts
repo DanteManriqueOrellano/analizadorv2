@@ -6,12 +6,14 @@ import Router from "koa-router";
 import cors from 'koa2-cors'
 import { ApolloServer } from "apollo-server-koa";
 
-import { connectFireBase } from '../src/conecTodb/connectDB';
-import { schemas } from './graphql/schemas/indexSchemas';
 
+import { schemas } from './graphql/schemas/indexSchemas';
+import { ConnecttoFirebase } from './conecTodb/connectDB';
+
+ConnecttoFirebase()
 const port = 3000
 const main = async () => {
-    connectFireBase()
+    
     const app = new Koa();
     const router = new Router();
     const apolloServer = new ApolloServer({

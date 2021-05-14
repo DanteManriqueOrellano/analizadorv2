@@ -2,7 +2,7 @@ import * as admin from 'firebase-admin';
 import * as fireorm from 'fireorm';
 
 
-export function connectFireBase() {
+export async function ConnecttoFirebase() {
 
     admin.initializeApp({
         credential: admin.credential.cert({
