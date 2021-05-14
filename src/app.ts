@@ -9,6 +9,7 @@ import { ApolloServer } from "apollo-server-koa";
 
 import { schemas } from './graphql/schemas/indexSchemas';
 import { ConnecttoFirebase } from './DB';
+import koaBody from 'koa-body';
 
 
 ConnecttoFirebase()
@@ -31,6 +32,7 @@ const main = async () => {
             }
         }
     });
+    router.use(koaBody())
     app.use(koabody());
     app.use(router.routes());
     app.use(cors({ credentials: true, origin: "http://localhost:3000" }));
