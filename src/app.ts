@@ -31,17 +31,19 @@ const main = async () => {
             }
         }
     });
+    app.use(koabody());
+    app.use(router.routes());
     app.use(cors({ credentials: true, origin: "http://localhost:3000" }));
 
-   apolloServer.applyMiddleware({ app, path: '/joder', cors: true });
+    apolloServer.applyMiddleware({ app, path: '/joder', cors: true });
 
-    app.use(koabody());
+    
 
     router.get("/ping", async ctx => {
         ctx.body = "pong";
     });
 
-    app.use(router.routes());
+    
 
     app.listen(port, ()=> console.log(`server runnning at ${port}`))
 
