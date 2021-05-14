@@ -35,4 +35,4 @@ async function ConnecttoFirebase() {
     fireorm.initialize(firestore);
 }
 exports.ConnecttoFirebase = ConnecttoFirebase;
-//# sourceMappingURL=connectDB.js.map
+//# sourceMappingURL=DB.js.map
