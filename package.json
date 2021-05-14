@@ -47,6 +47,6 @@
     "typedi": "^0.10.0"
   },
   "engines": {
-    "node": "14.x"
+    "node": "14.x.x"
   }
 }
