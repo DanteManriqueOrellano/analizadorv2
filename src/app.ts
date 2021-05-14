@@ -33,7 +33,7 @@ const main = async () => {
     });
     app.use(cors({ credentials: true, origin: "http://localhost:3000" }));
 
-  // apolloServer.applyMiddleware({ app, path: '/joder', cors: true });
+   apolloServer.applyMiddleware({ app, path: '/joder', cors: true });
 
     app.use(koabody());
 
