@@ -37,7 +37,11 @@ const main = async () => {
     
     
     app.use(json());
-    app.use(bodyparser());
+    app.use(bodyparser({
+        detectJSON: function (ctx) {
+            return /\.json$/i.test(ctx.path);
+        }
+    }));
     app.use(router.routes());
     app.use(cors({ credentials: true, origin: "http://localhost:3000" }));
 
