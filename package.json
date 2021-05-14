@@ -8,7 +8,8 @@
     "heroku-postbuild": "npm run build",
     "dev": "nodemon src/app.ts --exec ts-node",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node build/app.js"
+    "start": "node build/app.js",
+    "deploy": "gcloud app deploy"
   },
   "author": "",
   "license": "ISC",
