@@ -8,16 +8,16 @@ import { ApolloServer } from "apollo-server-koa";
 
 
 import { schemas } from './graphql/schemas/indexSchemas';
-import { ConnecttoFirebase } from './DB';
+//import { ConnecttoFirebase } from './DB';
 
 
-ConnecttoFirebase()
+//ConnecttoFirebase()
 const port = 3000
 const main = async () => {
     
     const app = new Koa();
     const router = new Router();
-    const apolloServer = new ApolloServer({
+  /*  const apolloServer = new ApolloServer({
         introspection: true,
         schema: await schemas,
         playground: true,
@@ -30,10 +30,10 @@ const main = async () => {
                 userSession: session
             }
         }
-    });
+    });*/
     app.use(cors({ credentials: true, origin: "http://localhost:3000" }));
 
-    apolloServer.applyMiddleware({ app, path: '/joder', cors: true });
+  // apolloServer.applyMiddleware({ app, path: '/joder', cors: true });
 
     app.use(koabody());
 
